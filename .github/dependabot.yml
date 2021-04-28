@@ -1,0 +1,28 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "07:00"
+  open-pull-requests-limit: 10
+  target-branch: master
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: io.jenkins.tools.bom:bom-2.222.x
+    versions:
+    - "21"
+    - "23"
+    - "25"
+    - "26"
+    - "27"
+  - dependency-name: io.jenkins.blueocean:blueocean-web
+    versions:
+    - 1.24.4
+    - 1.24.5
+  - dependency-name: org.jenkins-ci.plugins:plugin
+    versions:
+    - "4.15"
+    - "4.16"
+    - "4.17"
